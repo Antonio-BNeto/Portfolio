@@ -10,18 +10,18 @@
   --hue-color: 220; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
   /* HSL color mode */
-  --first-color: #6c63ff;           /* hsl(230, 69%, 61%) */
-  --first-color-second: #6c63ff;    /* hsl(230, 69%, 61%) */
-  --first-color-alt: #5e57cc;       /* hsl(230, 57%, 53%) */
-  --first-color-lighter: #dad9ff;   /* hsl(230, 92%, 85%) */
-  --title-color: #1a1a2e;           /* hsl(230, 8%, 15%) */
-  --text-color: #5f5f7a;            /* hsl(230, 8%, 45%) */
-  --text-color-light: #9999b3;      /* hsl(230, 8%, 65%) */
-  --input-color: #f2f2fd;           /* hsl(230, 70%, 96%) */
-  --body-color: #fbfbff;            /* hsl(230, 60%, 99%) */
-  --container-color: #ffffff;       /* #fff (já em hex) */
-  --scroll-bar-color: #e6e6f0;      /* hsl(230, 12%, 90%) */
-  --scroll-thumb-color: #ccccdf;    /* hsl(230, 12%, 80%) */
+  --first-color: hsl(var(--hue-color), 69%, 61%);
+  --first-color-second: hsl(var(--hue-color), 69%, 61%);
+  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  --title-color: hsl(var(--hue-color), 15%, 20%);
+  --text-color: hsl(var(--hue-color), 15%, 35%);
+  --text-color-light: hsl(var(--hue-color), 15%, 55%);
+  --input-color: hsl(var(--hue-color), 70%, 96%);
+  --body-color: hsl(var(--hue-color), 60%, 98%);
+  --container-color: hsl(0, 0%, 100%); 
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 75%);
 
   /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif; 
@@ -601,7 +601,7 @@ img {
 }
 
 .footer__link:hover {
-  color: var(--first-color);
+  color: var(--first-color-alt);
 }
 
 .footer__social {
@@ -610,18 +610,22 @@ img {
 }
 
 .footer__social:hover {
-  color: var(--first-color);
+  color: var(--first-color-alt);
 }
 
 .footer__copy {
   font-size: var(--smaller-font-size);
+  font-weight: bold;
   text-align: center;
-  color: var(--text-color-light);
+  color: #FFF;
   margin-top: var(--mb-3);
 }
 
 .footer__title,
-.footer__subtitle,
+.footer__subtitle{
+  color: #FFF;
+}
+
 .footer__link,
 .footer__social {
   color: #FFF;
