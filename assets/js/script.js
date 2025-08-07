@@ -19,7 +19,6 @@ if(navClose){
     })
 }
 
-
 /*=============== REMOVE MENU MOBILE ===============*/
 const navLink = document.querySelectorAll('.nav__link')
 
@@ -162,35 +161,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-/*=============== FORM VALIDATION ===============*/
-const contactForm = document.getElementById('contact-form');
-
-contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const subject = document.getElementById('subject').value.trim();
-    const message = document.getElementById('message').value.trim();
-    
-    // Simple validation
-    if (!name || !email || !subject || !message) {
-        alert('Por favor, preencha todos os campos.');
-        return;
-    }
-    
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert('Por favor, insira um email válido.');
-        return;
-    }
-    
-    // Success message (in a real application, you would send the form data to a server)
-    alert('Mensagem enviada com sucesso! Entrarei em contato em breve.');
-    contactForm.reset();
-});
-
 /*=============== TYPING ANIMATION ===============*/
 const typingText = document.querySelector('.home__subtitle');
 const textArray = ['Desenvolvedor Full-Stack', 'Criador de Soluções Web', 'Designer UI/UX'];
@@ -226,54 +196,3 @@ window.addEventListener('load', () => {
     typingText.textContent = '';
     setTimeout(typeWriter, 1000);
 });
-
-/*=============== PARTICLES BACKGROUND ===============*/
-function createParticle() {
-    const particle = document.createElement('div');
-    particle.classList.add('particle');
-    particle.style.cssText = `
-        position: fixed;
-        width: 4px;
-        height: 4px;
-        background: var(--first-color);
-        border-radius: 50%;
-        pointer-events: none;
-        opacity: 0.6;
-        z-index: -1;
-        animation: float 6s linear infinite;
-    `;
-    
-    particle.style.left = Math.random() * 100 + 'vw';
-    particle.style.animationDelay = Math.random() * 6 + 's';
-    
-    document.body.appendChild(particle);
-    
-    setTimeout(() => {
-        particle.remove();
-    }, 6000);
-}
-
-// Add CSS for particle animation
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes float {
-        0% {
-            transform: translateY(100vh) rotate(0deg);
-            opacity: 0;
-        }
-        10% {
-            opacity: 0.6;
-        }
-        90% {
-            opacity: 0.6;
-        }
-        100% {
-            transform: translateY(-100vh) rotate(360deg);
-            opacity: 0;
-        }
-    }
-`;
-document.head.appendChild(style);
-
-// Create particles periodically
-setInterval(createParticle, 2000);
