@@ -2,6 +2,11 @@
 
 Este é um projeto de portfólio desenvolvido com o objetivo de apresentar meus principais projetos, habilidades e formas de contato de maneira simples, visual e profissional.
 
+## 🔗 Acesse o projeto
+
+Você pode visualizar o portfólio online pelo link abaixo:  
+[**Clique aqui para acessar**](LINK_DA_PAGINA_AQUI)
+
 ## 🧩 Sobre o projeto
 
 O portfólio tem como finalidade ser um ponto central para:
