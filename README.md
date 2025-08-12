@@ -5,7 +5,7 @@ Este é um projeto de portfólio desenvolvido com o objetivo de apresentar meus 
 ## 🔗 Acesse o projeto
 
 Você pode visualizar o portfólio online pelo link abaixo:  
-[**Clique aqui para acessar**](https://antonio-bneto.github.io/Portifolio/)
+[**Clique aqui para acessar**](https://antonio-bneto.github.io/Portfolio/)
 
 ## 🧩 Sobre o projeto
 
